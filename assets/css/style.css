@@ -419,10 +419,10 @@ h3 { font-size: 19px; font-weight: 600; }
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  backdrop-filter: blur(42px);
-  -webkit-backdrop-filter: blur(42px);
-  mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
-  -webkit-mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
+  backdrop-filter: blur(55px);
+  -webkit-backdrop-filter: blur(55px);
+  mask-image: linear-gradient(105deg, #000 0%, #000 20%, rgba(0,0,0,.75) 35%, rgba(0,0,0,0) 55%);
+  -webkit-mask-image: linear-gradient(105deg, #000 0%, #000 20%, rgba(0,0,0,.75) 35%, rgba(0,0,0,0) 55%);
 }
 
 /* Мягкий тональный переход от фона страницы к фотографии слева и снизу, как в макете */
