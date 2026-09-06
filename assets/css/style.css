@@ -99,7 +99,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: clamp(36px, 5.6vw, 78px);
+  font-size: clamp(32px, 4.8vw, 66px);
   text-transform: uppercase;
 }
 
@@ -422,6 +422,21 @@ h3 { font-size: 19px; font-weight: 600; }
   -webkit-mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
 }
 
+/* Дополнительное усиленное размытие именно в левом нижнем углу */
+.hero-media-blur-corner {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  height: 55%;
+  pointer-events: none;
+  backdrop-filter: blur(46px);
+  -webkit-backdrop-filter: blur(46px);
+  mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
+  -webkit-mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
+}
+
 /* Мягкий тональный переход от фона страницы к фотографии слева и снизу, как в макете */
 .hero-media-fade {
   position: absolute;
@@ -494,6 +509,28 @@ h3 { font-size: 19px; font-weight: 600; }
   font-weight: 700;
 }
 .hero-stat dd { color: var(--text-muted); font-size: 14px; line-height: 1.35; }
+
+/* Статистика поверх фото: занимает примерно половину ширины блока фото,
+   светлый текст с тенью для читаемости на любом участке снимка */
+.hero-stats-overlay {
+  position: absolute;
+  z-index: 3;
+  left: 26px;
+  bottom: 26px;
+  width: min(52%, 420px);
+  margin-top: 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 18px;
+}
+.hero-stats-overlay .stat-number,
+.hero-stats-overlay .stat-number-static {
+  color: var(--cream);
+  text-shadow: 0 1px 16px rgba(0,0,0,.35), 0 0 4px rgba(0,0,0,.25);
+}
+.hero-stats-overlay .hero-stat dd {
+  color: rgba(247, 243, 236, .8);
+  text-shadow: 0 1px 12px rgba(0,0,0,.3);
+}
 
 /* ==========================================================================
    FINDER
