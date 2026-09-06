@@ -349,7 +349,7 @@ h3 { font-size: 19px; font-weight: 600; }
 
 /* Шапка теперь position:fixed и не занимает места в потоке — фото должно
    доходить до самого верха страницы, поэтому у .hero нет верхнего отступа. */
-.hero { padding: 0 0 64px; overflow: hidden; }
+.hero { padding: 0; overflow: hidden; }
 
 .hero-top {
   display: flex;
