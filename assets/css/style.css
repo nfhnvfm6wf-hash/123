@@ -431,6 +431,23 @@ h3 { font-size: 19px; font-weight: 600; }
     radial-gradient(55% 42% at 0% 100%, #000 0%, rgba(0,0,0,.65) 45%, rgba(0,0,0,0) 80%);
 }
 
+/* Дополнительное усиление только для нижнего левого угла. Занимает узкую
+   зону строго внизу (высота меньше верхней 42%), чтобы боксы не пересекались
+   с верхним элементом — иначе размытие снова наложится неравномерно. */
+.hero-media-blur-boost {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 45%;
+  height: 30%;
+  pointer-events: none;
+  backdrop-filter: blur(38px);
+  -webkit-backdrop-filter: blur(38px);
+  mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 85%);
+  -webkit-mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 85%);
+}
+
 /* Мягкий тональный переход от фона страницы к фотографии слева и снизу, как в макете */
 .hero-media-fade {
   position: absolute;
