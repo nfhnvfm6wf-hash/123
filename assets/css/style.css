@@ -409,7 +409,20 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 .hero-photo.is-broken { display: none; }
 
-/* Мягкий переход от фона страницы к фотографии слева и снизу, как в макете */
+/* Настоящее размытие фотографии в зоне перехода (не только тон, а blur) —
+   маска ограничивает эффект только левой частью, дальше фото остаётся резким */
+.hero-media-blur {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
+  -webkit-mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
+}
+
+/* Мягкий тональный переход от фона страницы к фотографии слева и снизу, как в макете */
 .hero-media-fade {
   position: absolute;
   inset: 0;
@@ -461,17 +474,8 @@ h3 { font-size: 19px; font-weight: 600; }
   margin: 0 0 8px auto;
 }
 
-.hero-media-cta {
-  position: absolute;
-  z-index: 3;
-  left: 26px;
-  bottom: 26px;
-}
-
 .hero-stats {
-  margin-top: 64px;
-  padding-top: 36px;
-  border-top: 1px solid var(--border);
+  margin-top: 48px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
