@@ -369,6 +369,16 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 .hero-skyline { width: 100%; height: 100%; object-fit: cover; }
 
+/* Реальное фото поверх SVG-заглушки. Заглушка видна, пока файл не заменён (или не загрузился). */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-photo.is-broken { display: none; }
+
 .hero-visual-badge {
   position: absolute;
   top: 26px;
@@ -572,8 +582,12 @@ h3 { font-size: 19px; font-weight: 600; }
 .property-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px -26px rgba(23,20,15,.3); }
 
 .property-media { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; }
-.property-photo { width: 100%; height: 100%; transition: transform 1.1s var(--ease); }
+.property-photo { width: 100%; height: 100%; display: block; transition: transform 1.1s var(--ease); }
 .property-card:hover .property-photo { transform: scale(1.08); }
+
+/* Реальное фото поверх SVG-заглушки внутри карточки помещения */
+img.property-photo { position: absolute; inset: 0; object-fit: cover; }
+img.property-photo.is-broken { display: none; }
 
 .property-fav {
   position: absolute;
@@ -624,6 +638,14 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 .foundation-media { position: absolute; inset: 0; z-index: 0; }
 .foundation-media svg { width: 100%; height: 100%; }
+.foundation-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.foundation-photo.is-broken { display: none; }
 .foundation-media::after {
   content: "";
   position: absolute;
