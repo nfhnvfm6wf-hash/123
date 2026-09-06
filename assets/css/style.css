@@ -496,8 +496,12 @@ h3 { font-size: 19px; font-weight: 600; }
   margin-top: 36px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px 12px;
+  gap: 18px 16px;
+  /* немного шире текстовой колонки — правый край заходит на фото */
+  width: calc(100% + 70px);
 }
+.hero-stat { padding-left: 16px; border-left: 1px solid var(--border); }
+.hero-stat:first-child { padding-left: 0; border-left: none; }
 .hero-stat dt { margin-bottom: 6px; }
 .stat-number, .stat-number-static {
   font-size: clamp(17px, 1.7vw, 22px);
@@ -996,7 +1000,7 @@ img.property-photo.is-broken { display: none; }
   /* На мобильном текст уже не наезжает на фото — оставляем только мягкий переход снизу */
   .hero-media-fade { background: linear-gradient(to bottom, rgba(247,243,236,0) 88%, rgba(247,243,236,.55) 100%); }
   .hero-visual-caption { display: none; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); row-gap: 28px; width: 100%; }
 
   .llc-grid { grid-template-columns: 1fr; }
   .faq-grid { grid-template-columns: 1fr; }
