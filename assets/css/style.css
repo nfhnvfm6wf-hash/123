@@ -412,50 +412,17 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 .hero-photo.is-broken { display: none; }
 
-/* Настоящее размытие фотографии (не только тон, а blur) — только в левом
-   верхнем и левом нижнем углах. Один элемент с двумя пятнами в одной маске —
-   это важно: если сделать два отдельных элемента с backdrop-filter, они
-   накладываются друг на друга по-разному и размытие получается неравномерным. */
-.hero-media-blur {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
-  mask-image:
-    radial-gradient(55% 42% at 0% 0%,   #000 0%, rgba(0,0,0,.65) 45%, rgba(0,0,0,0) 80%),
-    radial-gradient(55% 42% at 0% 100%, #000 0%, rgba(0,0,0,.65) 45%, rgba(0,0,0,0) 80%);
-  -webkit-mask-image:
-    radial-gradient(55% 42% at 0% 0%,   #000 0%, rgba(0,0,0,.65) 45%, rgba(0,0,0,0) 80%),
-    radial-gradient(55% 42% at 0% 100%, #000 0%, rgba(0,0,0,.65) 45%, rgba(0,0,0,0) 80%);
-}
-
-/* Дополнительное усиление только для нижнего левого угла. Занимает узкую
-   зону строго внизу (высота меньше верхней 42%), чтобы боксы не пересекались
-   с верхним элементом — иначе размытие снова наложится неравномерно. */
-.hero-media-blur-boost {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  width: 45%;
-  height: 30%;
-  pointer-events: none;
-  backdrop-filter: blur(38px);
-  -webkit-backdrop-filter: blur(38px);
-  mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 85%);
-  -webkit-mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.6) 45%, rgba(0,0,0,0) 85%);
-}
-
-/* Мягкий тональный переход от фона страницы к фотографии слева и снизу, как в макете */
+/* Мягкий тональный переход от фона страницы (белый/ivory) к фотографии —
+   основная диагональ слева, плюс усиленные белые пятна по углам (низ сильнее верха).
+   Никакого blur — только плавное растворение цвета. */
 .hero-media-fade {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
   background:
-    linear-gradient(to bottom, rgba(247, 243, 236, 0) 92%, rgba(247, 243, 236, .55) 100%),
+    radial-gradient(55% 48% at 0% 100%, var(--bg) 0%, rgba(247,243,236,.8) 35%, rgba(247,243,236,.35) 55%, rgba(247,243,236,0) 80%),
+    radial-gradient(48% 40% at 0% 0%,   var(--bg) 0%, rgba(247,243,236,.7) 30%, rgba(247,243,236,.25) 50%, rgba(247,243,236,0) 78%),
     linear-gradient(105deg,
       var(--bg) 0%,
       var(--bg) 4%,
