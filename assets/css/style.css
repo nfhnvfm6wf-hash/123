@@ -421,15 +421,15 @@ h3 { font-size: 19px; font-weight: 600; }
   z-index: 2;
   pointer-events: none;
   background:
-    radial-gradient(55% 48% at 0% 100%, var(--bg) 0%, rgba(247,243,236,.8) 35%, rgba(247,243,236,.35) 55%, rgba(247,243,236,0) 80%),
-    radial-gradient(48% 40% at 0% 0%,   var(--bg) 0%, rgba(247,243,236,.7) 30%, rgba(247,243,236,.25) 50%, rgba(247,243,236,0) 78%),
+    radial-gradient(62% 55% at 0% 100%, var(--bg) 0%, rgba(247,243,236,.9) 38%, rgba(247,243,236,.5) 60%, rgba(247,243,236,0) 86%),
+    radial-gradient(54% 46% at 0% 0%,   var(--bg) 0%, rgba(247,243,236,.85) 34%, rgba(247,243,236,.4) 56%, rgba(247,243,236,0) 84%),
     linear-gradient(105deg,
       var(--bg) 0%,
-      var(--bg) 4%,
-      rgba(247, 243, 236, .8) 14%,
-      rgba(247, 243, 236, .45) 22%,
-      rgba(247, 243, 236, .15) 28%,
-      rgba(247, 243, 236, 0) 34%);
+      var(--bg) 6%,
+      rgba(247, 243, 236, .85) 16%,
+      rgba(247, 243, 236, .5) 24%,
+      rgba(247, 243, 236, .2) 30%,
+      rgba(247, 243, 236, 0) 38%);
 }
 
 .hero-visual-badge {
