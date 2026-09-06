@@ -381,9 +381,9 @@ h3 { font-size: 19px; font-weight: 600; }
   max-width: 34ch;
   margin-bottom: 32px;
 }
-.hero-actions { display: flex; gap: 8px; flex-wrap: nowrap; }
+.hero-actions { display: flex; gap: 8px; flex-wrap: nowrap; width: max-content; }
 /* Кнопки компактнее и без переноса в столбик — всегда рядом, в один ряд */
-.hero-actions .btn { padding: 12px 14px; font-size: 13px; gap: 6px; flex: 0 1 auto; }
+.hero-actions .btn { padding: 15px 22px; font-size: 14.5px; gap: 8px; flex: 0 0 auto; }
 .hero-actions .btn span { white-space: nowrap; }
 
 /* Фото на всю высоту секции, до правого края макета — без рамки и скруглений */
@@ -425,7 +425,7 @@ h3 { font-size: 19px; font-weight: 600; }
   -webkit-mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
 }
 
-/* Дополнительное усиленное размытие именно в левом нижнем углу */
+/* Дополнительное усиленное размытие в левом нижнем и левом верхнем углах — одинаковой силы */
 .hero-media-blur-corner {
   position: absolute;
   z-index: 1;
@@ -438,6 +438,19 @@ h3 { font-size: 19px; font-weight: 600; }
   -webkit-backdrop-filter: blur(46px);
   mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
   -webkit-mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
+}
+.hero-media-blur-corner-top {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 60%;
+  height: 55%;
+  pointer-events: none;
+  backdrop-filter: blur(46px);
+  -webkit-backdrop-filter: blur(46px);
+  mask-image: radial-gradient(100% 100% at 0% 0%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
+  -webkit-mask-image: radial-gradient(100% 100% at 0% 0%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
 }
 
 /* Мягкий тональный переход от фона страницы к фотографии слева и снизу, как в макете */
@@ -498,7 +511,7 @@ h3 { font-size: 19px; font-weight: 600; }
   grid-template-columns: repeat(4, 1fr);
   gap: 18px 16px;
   /* немного шире текстовой колонки — правый край заходит на фото */
-  width: calc(100% + 70px);
+  width: calc(100% + 160px);
 }
 .hero-stat { padding-left: 16px; border-left: 1px solid var(--border); }
 .hero-stat:first-child { padding-left: 0; border-left: none; }
