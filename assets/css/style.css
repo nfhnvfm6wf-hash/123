@@ -341,13 +341,24 @@ h3 { font-size: 19px; font-weight: 600; }
    HERO
    ========================================================================== */
 
-.hero { padding: 56px 0 64px; overflow: hidden; }
+.hero { padding: 32px 0 64px; overflow: hidden; }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(32px, 5vw, 72px);
-  align-items: center;
+.hero-top {
+  display: flex;
+  align-items: stretch;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 620px;
+}
+
+.hero-copy-col {
+  flex: 1 1 560px;
+  min-width: 320px;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px var(--gutter);
 }
 
 .hero-copy h1 { margin-bottom: 26px; }
@@ -359,15 +370,21 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
 
-.hero-visual { position: relative; }
-.hero-visual-frame {
+/* Фото на всю высоту секции, до правого края макета — без рамки и скруглений */
+.hero-media {
   position: relative;
-  border-radius: var(--radius-l);
+  flex: 1 1 45%;
+  min-width: 320px;
   overflow: hidden;
-  aspect-ratio: 5 / 6;
-  box-shadow: 0 30px 60px -30px rgba(23,20,15,.35);
 }
-.hero-skyline { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-skyline {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Реальное фото поверх SVG-заглушки. Заглушка видна, пока файл не заменён (или не загрузился). */
 .hero-photo {
@@ -379,8 +396,23 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 .hero-photo.is-broken { display: none; }
 
+/* Мягкий переход от фона страницы к фотографии, как в макете */
+.hero-media-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(100deg,
+    var(--bg) 0%,
+    var(--bg) 4%,
+    rgba(247, 243, 236, .9) 12%,
+    rgba(247, 243, 236, .55) 22%,
+    rgba(247, 243, 236, 0) 38%);
+}
+
 .hero-visual-badge {
   position: absolute;
+  z-index: 3;
   top: 26px;
   right: 26px;
   font-size: 11px;
@@ -392,14 +424,15 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 .hero-visual-caption {
   position: absolute;
-  top: 64px;
+  z-index: 3;
+  bottom: 26px;
   right: 26px;
   font-size: 11px;
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--cream);
   text-align: right;
-  opacity: .75;
+  opacity: .85;
   line-height: 1.5;
 }
 .hero-visual-caption::before {
@@ -413,9 +446,10 @@ h3 { font-size: 19px; font-weight: 600; }
 
 .hero-floating-card {
   position: absolute;
-  left: 22px;
-  bottom: 22px;
-  right: 22px;
+  z-index: 3;
+  left: 26px;
+  bottom: 26px;
+  right: 26px;
   max-width: 300px;
   background: rgba(247, 243, 236, .92);
   backdrop-filter: blur(10px);
@@ -934,8 +968,12 @@ img.property-photo.is-broken { display: none; }
   .nav-toggle { display: flex; }
   .mobile-nav { display: flex; }
 
-  .hero-grid { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; }
+  .hero-top { flex-direction: column; min-height: 0; }
+  .hero-copy-col { max-width: none; padding: 8px var(--gutter) 0; order: 2; }
+  .hero-media { order: 1; min-height: 340px; flex: none; width: 100%; }
+  .hero-media-fade { display: none; }
+  .hero-visual-caption { display: none; }
+  .hero-floating-card { right: 20px; max-width: none; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
 
   .llc-grid { grid-template-columns: 1fr; }
