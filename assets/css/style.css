@@ -79,7 +79,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: var(--container);
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -239,8 +238,10 @@ h3 { font-size: 19px; font-weight: 600; }
    ========================================================================== */
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   background: transparent;
   transition: background-color var(--dur-m) var(--ease), box-shadow var(--dur-m) var(--ease), padding var(--dur-m) var(--ease);
@@ -254,8 +255,6 @@ h3 { font-size: 19px; font-weight: 600; }
   padding: 14px 0;
 }
 
-.site-header .container { max-width: 1400px; }
-
 .header-inner {
   display: flex;
   align-items: center;
@@ -268,15 +267,17 @@ h3 { font-size: 19px; font-weight: 600; }
   font-size: 22px;
   font-weight: 800;
   letter-spacing: .04em;
+  text-shadow: 0 1px 14px rgba(247,243,236,.5);
 }
 .logo-caption {
   font-size: 10px;
   line-height: 1.25;
   letter-spacing: .04em;
   color: var(--text-muted);
-  border-left: 1px solid var(--border);
+  border-left: 1px solid rgba(107,101,89,.5);
   padding-left: 12px;
   text-transform: uppercase;
+  text-shadow: 0 1px 14px rgba(247,243,236,.75);
 }
 
 .main-nav ul { display: flex; gap: 22px; }
@@ -287,6 +288,7 @@ h3 { font-size: 19px; font-weight: 600; }
   position: relative;
   padding: 4px 0;
   white-space: nowrap;
+  text-shadow: 0 1px 14px rgba(247,243,236,.5);
 }
 .main-nav a::after {
   content: "";
@@ -302,8 +304,8 @@ h3 { font-size: 19px; font-weight: 600; }
 
 .header-side { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
 .header-phone { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.3; }
-.header-phone-number { font-weight: 700; font-size: 15px; }
-.header-phone-hours { font-size: 11.5px; color: var(--text-muted); }
+.header-phone-number { font-weight: 700; font-size: 15px; text-shadow: 0 1px 12px rgba(247,243,236,.5); }
+.header-phone-hours { font-size: 11.5px; color: var(--text-muted); text-shadow: 0 1px 12px rgba(247,243,236,.7); }
 
 .nav-toggle {
   display: none;
@@ -318,6 +320,7 @@ h3 { font-size: 19px; font-weight: 600; }
   width: 22px;
   height: 1.5px;
   background: var(--text);
+  filter: drop-shadow(0 1px 6px rgba(247,243,236,.6));
   transition: transform var(--dur-s) var(--ease), opacity var(--dur-s) var(--ease);
 }
 .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
@@ -341,24 +344,27 @@ h3 { font-size: 19px; font-weight: 600; }
    HERO
    ========================================================================== */
 
-.hero { padding: 32px 0 64px; overflow: hidden; }
+/* Шапка теперь position:fixed и не занимает места в потоке — фото должно
+   доходить до самого верха страницы, поэтому у .hero нет верхнего отступа. */
+.hero { padding: 0 0 64px; overflow: hidden; }
 
 .hero-top {
   display: flex;
   align-items: stretch;
-  max-width: 1400px;
-  margin: 0 auto;
-  min-height: 620px;
+  width: 100%;
+  min-height: 680px;
 }
 
 .hero-copy-col {
-  flex: 1 1 560px;
-  min-width: 320px;
-  max-width: 620px;
+  flex: 0 1 420px;
+  min-width: 300px;
+  max-width: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px var(--gutter);
+  /* padding-top отступает от плавающей шапки, чтобы текст не наезжал на неё;
+     левый отступ равен отступу .container, чтобы текст был на одной линии с логотипом в шапке */
+  padding: 128px 32px 24px var(--gutter);
 }
 
 .hero-copy h1 { margin-bottom: 26px; }
@@ -402,19 +408,20 @@ h3 { font-size: 19px; font-weight: 600; }
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background: linear-gradient(100deg,
+  background: linear-gradient(105deg,
     var(--bg) 0%,
-    var(--bg) 4%,
-    rgba(247, 243, 236, .9) 12%,
-    rgba(247, 243, 236, .55) 22%,
-    rgba(247, 243, 236, 0) 38%);
+    var(--bg) 2%,
+    rgba(247, 243, 236, .65) 8%,
+    rgba(247, 243, 236, .25) 14%,
+    rgba(247, 243, 236, 0) 22%);
 }
 
 .hero-visual-badge {
   position: absolute;
   z-index: 3;
-  top: 26px;
-  right: 26px;
+  /* Отступ сверху освобождает место под плавающую шапку (она position:fixed и лежит поверх фото) */
+  top: 118px;
+  right: var(--gutter);
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -426,7 +433,7 @@ h3 { font-size: 19px; font-weight: 600; }
   position: absolute;
   z-index: 3;
   bottom: 26px;
-  right: 26px;
+  right: var(--gutter);
   font-size: 11px;
   letter-spacing: .06em;
   text-transform: uppercase;
