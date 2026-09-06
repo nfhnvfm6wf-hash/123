@@ -505,11 +505,9 @@ h3 { font-size: 19px; font-weight: 600; }
   white-space: nowrap;
   display: inline-block;
 }
-/* Буквенные надписи (в отличие от цифр) в Unbounded визуально крупнее и жирнее
-   при том же font-size — компенсируем, чтобы совпадало по ощущению с цифрами */
 .stat-number-text {
-  font-size: clamp(14px, 1.4vw, 18px);
-  font-weight: 700;
+  font-size: clamp(17px, 1.7vw, 22px);
+  font-weight: 800;
   white-space: normal;
 }
 .hero-stat dd { color: var(--text-muted); font-size: 12px; line-height: 1.35; }
@@ -723,7 +721,7 @@ img.property-photo.is-broken { display: none; }
   gap: 20px;
 }
 .foundation-stats dt { font-size: clamp(20px, 2vw, 26px); font-weight: 800; margin-bottom: 6px; }
-.foundation-stats dt.stat-number-text { font-weight: 700; font-size: clamp(17px, 1.7vw, 22px); }
+.foundation-stats dt.stat-number-text { font-weight: 800; font-size: clamp(20px, 2vw, 26px); }
 .foundation-stats dd { font-size: 13px; color: rgba(247,243,236,.65); line-height: 1.35; }
 
 /* ==========================================================================
