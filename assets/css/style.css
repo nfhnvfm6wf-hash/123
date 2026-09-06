@@ -32,7 +32,7 @@
   --dur-m: .6s;
   --dur-l: .9s;
 
-  --font: 'Golos Text', 'Manrope', 'Helvetica Neue', Arial, sans-serif;
+  --font: 'Unbounded', 'Golos Text', 'Manrope', 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ==========================================================================
@@ -93,15 +93,18 @@ h1, h2, h3 {
   line-height: 1.05;
 }
 
+h1, h2 {
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
 h1 {
-  font-size: clamp(44px, 6.4vw, 92px);
-  font-weight: 800;
+  font-size: clamp(36px, 5.6vw, 78px);
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: clamp(30px, 4vw, 52px);
-  font-weight: 700;
+  font-size: clamp(26px, 3.4vw, 44px);
 }
 
 h3 { font-size: 19px; font-weight: 600; }
