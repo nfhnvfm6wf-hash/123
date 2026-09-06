@@ -257,6 +257,8 @@ h3 { font-size: 19px; font-weight: 600; }
   box-shadow: 0 1px 0 var(--border);
   padding: 14px 0;
 }
+/* На сплошном светлом фоне (после скролла) подпись под телефоном снова тёмная — иначе белый на светлом не виден */
+.site-header.is-scrolled .header-phone-hours { color: var(--text-muted); text-shadow: none; }
 
 .header-inner {
   display: flex;
@@ -308,7 +310,7 @@ h3 { font-size: 19px; font-weight: 600; }
 .header-side { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
 .header-phone { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.3; }
 .header-phone-number { font-weight: 700; font-size: 15px; text-shadow: 0 0 5px rgba(247,243,236,.85), 0 1px 2px rgba(247,243,236,.6); }
-.header-phone-hours { font-size: 11.5px; color: var(--text-muted); text-shadow: 0 0 5px rgba(247,243,236,.9), 0 1px 2px rgba(247,243,236,.7); }
+.header-phone-hours { font-size: 11.5px; color: var(--cream); text-shadow: 0 1px 4px rgba(23,20,15,.4); }
 
 .nav-toggle {
   display: none;
@@ -438,7 +440,7 @@ h3 { font-size: 19px; font-weight: 600; }
   /* Отступ сверху освобождает место под плавающую шапку (она position:fixed и лежит поверх фото) */
   top: 118px;
   right: var(--gutter);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--cream);
@@ -450,7 +452,7 @@ h3 { font-size: 19px; font-weight: 600; }
   z-index: 3;
   bottom: 26px;
   right: var(--gutter);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--cream);
