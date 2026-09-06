@@ -381,10 +381,10 @@ h3 { font-size: 19px; font-weight: 600; }
   max-width: 34ch;
   margin-bottom: 36px;
 }
-.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-/* Кнопки чуть компактнее, чтобы гарантированно помещались в один ряд рядом
-   в узкой текстовой колонке поверх фото */
-.hero-actions .btn { padding: 14px 18px; font-size: 14px; }
+.hero-actions { display: flex; gap: 8px; flex-wrap: nowrap; }
+/* Кнопки компактнее и без переноса в столбик — всегда рядом, в один ряд */
+.hero-actions .btn { padding: 12px 14px; font-size: 13px; gap: 6px; flex: 0 1 auto; }
+.hero-actions .btn span { white-space: nowrap; }
 
 /* Фото на всю высоту секции, до правого края макета — без рамки и скруглений */
 .hero-media {
