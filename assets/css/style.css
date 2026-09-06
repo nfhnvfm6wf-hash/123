@@ -495,13 +495,12 @@ h3 { font-size: 19px; font-weight: 600; }
 .hero-stats {
   margin-top: 36px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px 20px;
-  max-width: 380px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px 12px;
 }
 .hero-stat dt { margin-bottom: 6px; }
 .stat-number, .stat-number-static {
-  font-size: clamp(21px, 2.1vw, 27px);
+  font-size: clamp(17px, 1.7vw, 22px);
   font-weight: 800;
   white-space: nowrap;
   display: inline-block;
@@ -509,10 +508,11 @@ h3 { font-size: 19px; font-weight: 600; }
 /* Буквенные надписи (в отличие от цифр) в Unbounded визуально крупнее и жирнее
    при том же font-size — компенсируем, чтобы совпадало по ощущению с цифрами */
 .stat-number-text {
-  font-size: clamp(17px, 1.75vw, 22px);
+  font-size: clamp(14px, 1.4vw, 18px);
   font-weight: 700;
+  white-space: normal;
 }
-.hero-stat dd { color: var(--text-muted); font-size: 13px; line-height: 1.35; }
+.hero-stat dd { color: var(--text-muted); font-size: 12px; line-height: 1.35; }
 
 /* ==========================================================================
    FINDER
