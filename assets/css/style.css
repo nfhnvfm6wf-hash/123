@@ -419,38 +419,10 @@ h3 { font-size: 19px; font-weight: 600; }
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(42px);
+  -webkit-backdrop-filter: blur(42px);
   mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
   -webkit-mask-image: linear-gradient(105deg, #000 0%, #000 12%, rgba(0,0,0,.7) 22%, rgba(0,0,0,0) 36%);
-}
-
-/* Дополнительное усиленное размытие в левом нижнем и левом верхнем углах — одинаковой силы */
-.hero-media-blur-corner {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  width: 60%;
-  height: 55%;
-  pointer-events: none;
-  backdrop-filter: blur(46px);
-  -webkit-backdrop-filter: blur(46px);
-  mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
-  -webkit-mask-image: radial-gradient(100% 100% at 0% 100%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
-}
-.hero-media-blur-corner-top {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 60%;
-  height: 55%;
-  pointer-events: none;
-  backdrop-filter: blur(46px);
-  -webkit-backdrop-filter: blur(46px);
-  mask-image: radial-gradient(100% 100% at 0% 0%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
-  -webkit-mask-image: radial-gradient(100% 100% at 0% 0%, #000 0%, rgba(0,0,0,.7) 40%, rgba(0,0,0,0) 75%);
 }
 
 /* Мягкий тональный переход от фона страницы к фотографии слева и снизу, как в макете */
