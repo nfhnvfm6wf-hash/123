@@ -381,7 +381,10 @@ h3 { font-size: 19px; font-weight: 600; }
   max-width: 34ch;
   margin-bottom: 36px;
 }
-.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+/* Кнопки чуть компактнее, чтобы гарантированно помещались в один ряд рядом
+   в узкой текстовой колонке поверх фото */
+.hero-actions .btn { padding: 14px 18px; font-size: 14px; }
 
 /* Фото на всю высоту секции, до правого края макета — без рамки и скруглений */
 .hero-media {
@@ -490,14 +493,15 @@ h3 { font-size: 19px; font-weight: 600; }
 }
 
 .hero-stats {
-  margin-top: 48px;
+  margin-top: 36px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px 20px;
+  max-width: 380px;
 }
 .hero-stat dt { margin-bottom: 6px; }
 .stat-number, .stat-number-static {
-  font-size: clamp(24px, 2.6vw, 32px);
+  font-size: clamp(21px, 2.1vw, 27px);
   font-weight: 800;
   white-space: nowrap;
   display: inline-block;
@@ -505,32 +509,10 @@ h3 { font-size: 19px; font-weight: 600; }
 /* Буквенные надписи (в отличие от цифр) в Unbounded визуально крупнее и жирнее
    при том же font-size — компенсируем, чтобы совпадало по ощущению с цифрами */
 .stat-number-text {
-  font-size: clamp(20px, 2.15vw, 26px);
+  font-size: clamp(17px, 1.75vw, 22px);
   font-weight: 700;
 }
-.hero-stat dd { color: var(--text-muted); font-size: 14px; line-height: 1.35; }
-
-/* Статистика поверх фото: занимает примерно половину ширины блока фото,
-   светлый текст с тенью для читаемости на любом участке снимка */
-.hero-stats-overlay {
-  position: absolute;
-  z-index: 3;
-  left: 26px;
-  bottom: 26px;
-  width: min(52%, 420px);
-  margin-top: 0;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px 18px;
-}
-.hero-stats-overlay .stat-number,
-.hero-stats-overlay .stat-number-static {
-  color: var(--cream);
-  text-shadow: 0 1px 16px rgba(0,0,0,.35), 0 0 4px rgba(0,0,0,.25);
-}
-.hero-stats-overlay .hero-stat dd {
-  color: rgba(247, 243, 236, .8);
-  text-shadow: 0 1px 12px rgba(0,0,0,.3);
-}
+.hero-stat dd { color: var(--text-muted); font-size: 13px; line-height: 1.35; }
 
 /* ==========================================================================
    FINDER
