@@ -670,7 +670,7 @@ img.property-photo.is-broken { display: none; }
   position: relative;
   color: var(--cream);
   overflow: hidden;
-  padding: 110px 0;
+  padding: 64px 0;
 }
 .foundation-media { position: absolute; inset: 0; z-index: 0; }
 .foundation-media svg { width: 100%; height: 100%; }
@@ -688,7 +688,7 @@ img.property-photo.is-broken { display: none; }
   inset: 0;
   background: linear-gradient(100deg, rgba(16,15,12,.92) 30%, rgba(16,15,12,.55) 65%, rgba(16,15,12,.35));
 }
-.foundation-inner { position: relative; z-index: 1; max-width: 640px; }
+.foundation-inner { position: relative; z-index: 1; }
 .foundation .section-index { color: rgba(247,243,236,.55); }
 .foundation h2 { text-transform: uppercase; margin-bottom: 22px; }
 .foundation-text { color: rgba(247,243,236,.78); font-size: 17px; max-width: 46ch; margin-bottom: 34px; }
