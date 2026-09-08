@@ -51,7 +51,7 @@
 
 .hero-actions {
     display: flex;
-    gap: 24px;
+    gap: 40px;
     flex-wrap: nowrap;
     width: max-content;
 }
