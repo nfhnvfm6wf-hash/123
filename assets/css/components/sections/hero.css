@@ -92,7 +92,8 @@
     inset: 0;
     z-index: 2;
     pointer-events: none;
-    background: radial-gradient(62% 55% at 0% 100%, var(--bg) 0%, rgba(247, 243, 236, .9) 38%, rgba(247, 243, 236, .5) 60%, rgba(247, 243, 236, 0) 86%),
+    background: linear-gradient(to bottom, var(--bg) 0%, rgba(247, 243, 236, .82) 60px, rgba(247, 243, 236, .32) 130px, rgba(247, 243, 236, 0) 210px),
+    radial-gradient(62% 55% at 0% 100%, var(--bg) 0%, rgba(247, 243, 236, .9) 38%, rgba(247, 243, 236, .5) 60%, rgba(247, 243, 236, 0) 86%),
     radial-gradient(54% 46% at 0% 0%, var(--bg) 0%, rgba(247, 243, 236, .85) 34%, rgba(247, 243, 236, .4) 56%, rgba(247, 243, 236, 0) 84%),
     linear-gradient(105deg,
             var(--bg) 0%,
