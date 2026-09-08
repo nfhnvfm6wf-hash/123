@@ -60,8 +60,8 @@
 }
 
 .foundation-stats {
-    margin-top: 32px;
-    padding-top: 24px;
+    margin-top: 64px;
+    padding-top: 32px;
     border-top: 1px solid rgba(247, 243, 236, .18);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
