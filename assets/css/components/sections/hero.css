@@ -44,8 +44,8 @@
 
 .hero-lead {
     font-size: clamp(14px, 1.3vw, 16px);
-    color: var(--text-muted);
-    max-width: 34ch;
+    color: var(--text);
+    max-width: 42ch;
     margin-bottom: 32px;
 }
 
