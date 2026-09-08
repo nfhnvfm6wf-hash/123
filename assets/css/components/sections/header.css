@@ -100,18 +100,20 @@
     flex-direction: column;
     align-items: flex-end;
     line-height: 1.3;
+    background: var(--cream);
+    padding: 8px 16px;
+    border-radius: var(--radius-s);
 }
 
 .header-phone-number {
     font-weight: 700;
     font-size: 15px;
-    text-shadow: 0 0 5px rgba(247, 243, 236, .85), 0 1px 2px rgba(247, 243, 236, .6);
+    color: var(--dark);
 }
 
 .header-phone-hours {
     font-size: 11.5px;
-    color: var(--cream);
-    text-shadow: 0 1px 4px rgba(23, 20, 15, .4);
+    color: var(--text-muted);
 }
 
 .nav-toggle {
