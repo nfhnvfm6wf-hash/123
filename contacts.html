@@ -186,30 +186,10 @@
             </div>
 
             <div class="contacts-map" data-reveal>
-                <svg class="contacts-map-svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" role="img"
-                     aria-label="Схематичная карта расположения офиса">
-                    <defs>
-                        <linearGradient id="cmg1" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#2A2722"/>
-                            <stop offset="100%" stop-color="#655C48"/>
-                        </linearGradient>
-                    </defs>
-                    <rect width="400" height="300" fill="url(#cmg1)"/>
-                    <g opacity="0.5" stroke="#F7F3EC" stroke-width="1">
-                        <path d="M0 90h400M0 150h400M0 210h400M120 0v300M240 0v300"/>
-                    </g>
-                </svg>
-                <img class="contacts-map-photo js-photo" src="assets/img/contacts.jpg"
-                     data-base="assets/img/contacts" data-exts="jpg,png,jpeg,webp"
-                     onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
-                     alt="Карта расположения офиса ADRES">
-                <div class="contacts-map-pin" aria-hidden="true">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                        <path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" stroke="currentColor" stroke-width="1.4"/>
-                        <circle cx="12" cy="9.5" r="2.6" stroke="currentColor" stroke-width="1.4"/>
-                    </svg>
-                    <span>1-й Красногвардейский пр-д, 21</span>
-                </div>
+                <iframe class="contacts-map-frame"
+                        src="https://www.google.com/maps?q=Москва,+1-й+Красногвардейский+проезд,+21&output=embed"
+                        title="Карта: г. Москва, 1-й Красногвардейский пр-д, 21"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
