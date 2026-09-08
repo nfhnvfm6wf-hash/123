@@ -94,6 +94,10 @@
                     <path d="M0 120h1200M0 260h1200M0 400h1200M0 540h1200M200 0v640M420 0v640M640 0v640M860 0v640M1080 0v640"/>
                 </g>
             </svg>
+            <img class="page-hero-photo js-photo" src="assets/img/contacts-hero.jpg"
+                 data-base="assets/img/contacts-hero" data-exts="jpg,png,jpeg,webp"
+                 onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                 alt="">
         </div>
 
         <div class="container page-hero-inner" data-reveal>
