@@ -1,0 +1,36 @@
+.mobile-sticky {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    padding: 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    background: rgba(247, 243, 236, .94);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--border);
+    gap: 10px;
+    transform: translateY(100%);
+    transition: transform var(--dur-m) var(--ease);
+}
+
+.mobile-sticky.is-visible {
+    transform: translateY(0);
+}
+
+.mobile-sticky-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 56px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-s);
+    font-size: 0;
+}
+
+.mobile-sticky-btn {
+    flex: 1;
+    justify-content: center;
+}

@@ -1,0 +1,26 @@
+@import "./base/normalize.css";
+@import "./base/global.css";
+@import "./base/typography.css";
+
+@import "./helpers/variables.css";
+
+@import "./animations/keyframes.css";
+@import "./animations/reveal.css";
+@import "./animations/sticky.css";
+
+@import "./components/ui/button.css";
+
+@import "./components/sections/header.css";
+@import "./components/sections/hero.css";
+@import "./components/sections/finder.css";
+@import "./components/sections/advantages.css";
+@import "./components/sections/properties.css";
+@import "./components/sections/foundation.css";
+@import "./components/sections/inaccuracy.css";
+@import "./components/sections/llc.css";
+@import "./components/sections/process.css";
+@import "./components/sections/reviews.css";
+@import "./components/sections/faq.css";
+@import "./components/sections/cta.css";
+@import "./components/sections/footer.css";
+@import "./components/sections/mobile-sticky.css";

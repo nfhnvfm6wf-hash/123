@@ -1,0 +1,31 @@
+.inaccuracy {
+    background: var(--dark-2);
+    color: var(--cream);
+    padding: 96px 0;
+}
+
+.inaccuracy-inner {
+    max-width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inaccuracy-icon {
+    display: inline-flex;
+    color: var(--taupe);
+    margin-bottom: 26px;
+}
+
+.inaccuracy h2 {
+    margin-bottom: 18px;
+}
+
+.inaccuracy p {
+    color: rgba(247, 243, 236, .72);
+    font-size: 16.5px;
+    margin-bottom: 34px;
+}
+
+.inaccuracy .btn {
+    margin: 0 auto;
+}
