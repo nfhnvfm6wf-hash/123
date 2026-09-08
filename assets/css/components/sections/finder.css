@@ -1,6 +1,6 @@
 .finder {
     background: var(--bg-alt);
-    padding: 56px 0;
+    padding: 36px 0;
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
     scroll-margin-top: 84px;
@@ -12,7 +12,7 @@
     display: flex;
     align-items: baseline;
     gap: 18px;
-    margin-bottom: 32px;
+    margin-bottom: 22px;
     flex-wrap: wrap;
 }
 
