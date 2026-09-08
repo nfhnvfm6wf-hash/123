@@ -25,7 +25,7 @@
 .review-rating {
     display: flex;
     gap: 3px;
-    color: var(--taupe);
+    color: #F5B301;
     margin-bottom: 16px;
 }
 
