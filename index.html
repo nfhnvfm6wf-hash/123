@@ -160,7 +160,7 @@
                 <p class="section-note">Быстрый подбор по параметрам</p>
             </div>
 
-            <form class="finder-form" data-reveal action="#properties" method="get">
+            <form class="finder-form" id="finder-form" data-reveal action="#properties" method="get">
                 <div class="finder-field" data-dropdown>
                     <button type="button" class="finder-trigger" aria-haspopup="listbox" aria-expanded="false">
                         <span class="finder-label">ИФНС</span>
@@ -172,43 +172,43 @@
                     </button>
                     <ul class="finder-dropdown" role="listbox" hidden>
                         <li role="option" tabindex="0">Любая</li>
-                        <li role="option" tabindex="0">ИФНС № 1 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 2 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 3 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 4 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 5 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 6 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 7 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 8 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 9 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 10 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 13 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 14 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 15 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 16 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 17 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 18 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 19 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 20 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 21 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 22 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 23 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 24 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 25 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 26 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 27 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 28 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 29 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 30 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 31 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 33 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 34 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 35 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 36 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 43 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 46 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 47 по г. Москве</li>
-                        <li role="option" tabindex="0">ИФНС № 51 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="1">ИФНС № 1 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="2">ИФНС № 2 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="3">ИФНС № 3 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="4">ИФНС № 4 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="5">ИФНС № 5 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="6">ИФНС № 6 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="7">ИФНС № 7 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="8">ИФНС № 8 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="9">ИФНС № 9 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="10">ИФНС № 10 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="13">ИФНС № 13 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="14">ИФНС № 14 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="15">ИФНС № 15 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="16">ИФНС № 16 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="17">ИФНС № 17 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="18">ИФНС № 18 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="19">ИФНС № 19 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="20">ИФНС № 20 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="21">ИФНС № 21 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="22">ИФНС № 22 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="23">ИФНС № 23 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="24">ИФНС № 24 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="25">ИФНС № 25 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="26">ИФНС № 26 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="27">ИФНС № 27 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="28">ИФНС № 28 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="29">ИФНС № 29 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="30">ИФНС № 30 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="31">ИФНС № 31 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="33">ИФНС № 33 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="34">ИФНС № 34 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="35">ИФНС № 35 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="36">ИФНС № 36 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="43">ИФНС № 43 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="46">ИФНС № 46 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="47">ИФНС № 47 по г. Москве</li>
+                        <li role="option" tabindex="0" data-value="51">ИФНС № 51 по г. Москве</li>
                     </ul>
                 </div>
 

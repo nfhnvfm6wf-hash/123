@@ -80,6 +80,7 @@ const initDropdowns = () => {
                     valueEl.textContent = option.textContent;
                     valueEl.title = option.textContent;
                 }
+                field.dataset.selectedValue = option.dataset.value || '';
                 field.classList.remove('is-open');
                 trigger.setAttribute('aria-expanded', 'false');
                 dropdown.hidden = true;
@@ -102,6 +103,21 @@ const initDropdowns = () => {
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeAllDropdowns();
+    });
+};
+
+const initFinderSubmit = () => {
+    const form = document.getElementById('finder-form');
+    if (!form) return;
+
+    form.addEventListener('submit', (e) => {
+        const ifnsField = form.querySelector('.finder-field:first-of-type');
+        const ifnsValue = ifnsField && ifnsField.dataset.selectedValue;
+
+        if (ifnsValue) {
+            e.preventDefault();
+            window.location.href = `ifns.html?n=${encodeURIComponent(ifnsValue)}`;
+        }
     });
 };
 
@@ -260,6 +276,26 @@ const initMobileStickyCta = () => {
     }
 };
 
+const initIfnsPage = () => {
+    const heading = document.getElementById('ifns-heading');
+    if (!heading) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const n = params.get('n');
+    const label = n ? `ИФНС № ${n} по г. Москве` : 'ИФНС Москвы';
+
+    heading.textContent = n ? `Свободные адреса — ${label}` : 'Свободные адреса по всем ИФНС';
+
+    const crumb = document.getElementById('ifns-crumb');
+    if (crumb) crumb.textContent = label;
+
+    document.querySelectorAll('.js-ifns-label').forEach((el) => {
+        el.textContent = label;
+    });
+
+    document.title = `Свободные адреса — ${label} — ADRES`;
+};
+
 const initFooterYear = () => {
     const yearEl = document.getElementById('footer-year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -269,11 +305,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initMobileNav();
     initDropdowns();
+    initFinderSubmit();
     initScrollReveal();
     initStatCounters();
     initFaqAccordion();
     initButtonEffects();
     initCtaForm();
+    initIfnsPage();
     initMobileStickyCta();
     initFooterYear();
 });
