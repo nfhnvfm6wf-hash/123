@@ -109,6 +109,7 @@
     top: 118px;
     right: var(--gutter);
     font-size: 13px;
+    font-weight: 300;
     letter-spacing: .1em;
     text-transform: uppercase;
     color: var(--cream);
@@ -122,6 +123,7 @@
     bottom: 26px;
     right: var(--gutter);
     font-size: 13px;
+    font-weight: 300;
     letter-spacing: .06em;
     text-transform: uppercase;
     color: var(--cream);
