@@ -76,7 +76,10 @@ const initDropdowns = () => {
 
         dropdown.querySelectorAll('li').forEach((option) => {
             const selectOption = () => {
-                if (valueEl) valueEl.textContent = option.textContent;
+                if (valueEl) {
+                    valueEl.textContent = option.textContent;
+                    valueEl.title = option.textContent;
+                }
                 field.classList.remove('is-open');
                 trigger.setAttribute('aria-expanded', 'false');
                 dropdown.hidden = true;

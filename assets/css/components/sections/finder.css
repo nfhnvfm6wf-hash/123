@@ -37,6 +37,7 @@
 
 .finder-field {
     position: relative;
+    min-width: 0;
 }
 
 .finder-trigger {
@@ -85,10 +86,24 @@
     font-weight: 600;
     display: block;
     margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .finder-trigger > span:first-child {
     flex: 1;
+    min-width: 0;
+}
+
+.finder-field:first-of-type .finder-label {
+    flex: 0 0 auto;
+}
+
+.finder-field:first-of-type .finder-value {
+    flex: 1;
+    min-width: 0;
+    text-align: right;
 }
 
 .finder-dropdown {
@@ -100,7 +115,9 @@
     border: 1px solid var(--border);
     border-radius: var(--radius-s);
     box-shadow: 0 20px 40px -20px rgba(23, 20, 15, .25);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 320px;
     z-index: 20;
     opacity: 0;
     transform: translateY(-6px);
