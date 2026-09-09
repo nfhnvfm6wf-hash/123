@@ -106,6 +106,23 @@ const initDropdowns = () => {
     });
 };
 
+const initHeroButtonWidths = () => {
+    const buttons = document.querySelectorAll('.hero-actions .btn');
+    if (buttons.length < 2) return;
+
+    const equalize = () => {
+        buttons.forEach((b) => { b.style.width = ''; });
+        const max = Math.max(...Array.from(buttons).map((b) => b.getBoundingClientRect().width));
+        buttons.forEach((b) => { b.style.width = `${Math.ceil(max)}px`; });
+    };
+
+    equalize();
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(equalize);
+    }
+    window.addEventListener('resize', equalize);
+};
+
 const initFinderSubmit = () => {
     const form = document.getElementById('finder-form');
     if (!form) return;
@@ -269,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initMobileNav();
     initDropdowns();
+    initHeroButtonWidths();
     initFinderSubmit();
     initScrollReveal();
     initStatCounters();
