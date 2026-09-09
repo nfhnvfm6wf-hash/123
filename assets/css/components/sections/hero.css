@@ -51,7 +51,7 @@
 
 .hero-actions {
     display: flex;
-    gap: 117px;
+    gap: 88px;
     flex-wrap: nowrap;
     width: max-content;
 }
@@ -61,6 +61,8 @@
     font-size: 14.5px;
     gap: 8px;
     flex: 0 0 auto;
+    min-width: 222px;
+    justify-content: center;
 }
 
 .hero-actions .btn span {
