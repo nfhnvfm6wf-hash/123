@@ -38,7 +38,7 @@
 
         <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
             <ul>
-                <li><a href="#properties">Адреса</a></li>
+                <li><a href="addresses.html">Адреса</a></li>
                 <li><a href="#llc">Регистрация ООО</a></li>
                 <li><a href="#advantages">Услуги</a></li>
                 <li><a href="#foundation">О компании</a></li>
@@ -69,7 +69,7 @@
 
     <div class="mobile-nav" id="mobile-nav">
         <ul>
-            <li><a href="#properties">Адреса</a></li>
+            <li><a href="addresses.html">Адреса</a></li>
             <li><a href="#llc">Регистрация ООО</a></li>
             <li><a href="#advantages">Услуги</a></li>
             <li><a href="#foundation">О компании</a></li>
@@ -599,7 +599,7 @@
                     <p class="section-index">/ 02</p>
                     <h2>Популярные помещения</h2>
                 </div>
-                <a href="#" class="link-underline properties-all">
+                <a href="addresses.html" class="link-underline properties-all">
                     Смотреть все адреса
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                         <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
@@ -610,7 +610,7 @@
 
             <ul class="properties-grid" id="properties-grid" data-reveal-group>
 
-                <li class="property-card" data-reveal>
+                <li class="property-card" data-okrug="ЦАО" data-ifns="1" data-reveal>
                     <a href="#" class="property-media" aria-label="Помещение 12 м², ЦАО, м. Красные Ворота">
                         <svg class="property-photo" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"
                              role="img" aria-label="Иллюстрация фасада помещения">
@@ -632,6 +632,7 @@
                     </a>
                     <div class="property-body">
                         <p class="property-area">12 м²</p>
+                        <p class="property-address">Каланчёвская ул., 11</p>
                         <p class="property-location">ЦАО, м. Красные Ворота<br>ИФНС №1</p>
                         <div class="property-footer">
                             <span class="property-price">18 000 ₽ <small>/ 11 мес.</small></span>
@@ -645,7 +646,7 @@
                     </div>
                 </li>
 
-                <li class="property-card" data-reveal>
+                <li class="property-card" data-okrug="САО" data-ifns="14" data-reveal>
                     <a href="#" class="property-media" aria-label="Помещение 14 м², САО, м. Динамо">
                         <svg class="property-photo" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"
                              role="img" aria-label="Иллюстрация фасада помещения">
@@ -667,6 +668,7 @@
                     </a>
                     <div class="property-body">
                         <p class="property-area">14 м²</p>
+                        <p class="property-address">Ленинградский пр-т, 36</p>
                         <p class="property-location">САО, м. Динамо<br>ИФНС №14</p>
                         <div class="property-footer">
                             <span class="property-price">20 000 ₽ <small>/ 11 мес.</small></span>
@@ -680,7 +682,7 @@
                     </div>
                 </li>
 
-                <li class="property-card" data-reveal>
+                <li class="property-card" data-okrug="ЗАО" data-ifns="31" data-reveal>
                     <a href="#" class="property-media" aria-label="Помещение 11 м², ЗАО, м. Кутузовская">
                         <svg class="property-photo" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"
                              role="img" aria-label="Иллюстрация фасада помещения">
@@ -702,6 +704,7 @@
                     </a>
                     <div class="property-body">
                         <p class="property-area">11 м²</p>
+                        <p class="property-address">Кутузовский пр-т, 26</p>
                         <p class="property-location">ЗАО, м. Кутузовская<br>ИФНС №31</p>
                         <div class="property-footer">
                             <span class="property-price">17 000 ₽ <small>/ 11 мес.</small></span>
@@ -715,7 +718,7 @@
                     </div>
                 </li>
 
-                <li class="property-card" data-reveal>
+                <li class="property-card" data-okrug="ЮАО" data-ifns="26" data-reveal>
                     <a href="#" class="property-media" aria-label="Помещение 13 м², ЮАО, м. Тульская">
                         <svg class="property-photo" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice"
                              role="img" aria-label="Иллюстрация фасада помещения">
@@ -737,6 +740,7 @@
                     </a>
                     <div class="property-body">
                         <p class="property-area">13 м²</p>
+                        <p class="property-address">Варшавское ш., 9</p>
                         <p class="property-location">ЮАО, м. Тульская<br>ИФНС №26</p>
                         <div class="property-footer">
                             <span class="property-price">19 000 ₽ <small>/ 11 мес.</small></span>
@@ -1095,6 +1099,56 @@
             </div>
         </div>
     </section>
+
+    <section class="partners">
+        <div class="container">
+            <p class="partners-eyebrow">Работаем с ведущими банками</p>
+            <ul class="partners-grid" data-reveal-group>
+                <li class="partner-item" style="--brand:#21A038;" data-reveal>
+                    <img class="partner-logo js-photo" src="assets/img/partner-1.png"
+                         data-base="assets/img/partner-1" data-exts="png,jpg,jpeg,webp"
+                         onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                         alt="Сбербанк">
+                    <span class="partner-name">Сбербанк</span>
+                </li>
+                <li class="partner-item" style="--brand:#FFDD2D;" data-reveal>
+                    <img class="partner-logo js-photo" src="assets/img/partner-2.png"
+                         data-base="assets/img/partner-2" data-exts="png,jpg,jpeg,webp"
+                         onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                         alt="Т-Банк">
+                    <span class="partner-name">Т-Банк</span>
+                </li>
+                <li class="partner-item" style="--brand:#EF3124;" data-reveal>
+                    <img class="partner-logo js-photo" src="assets/img/partner-3.png"
+                         data-base="assets/img/partner-3" data-exts="png,jpg,jpeg,webp"
+                         onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                         alt="Альфа-Банк">
+                    <span class="partner-name">Альфа-Банк</span>
+                </li>
+                <li class="partner-item" style="--brand:#0A2896;" data-reveal>
+                    <img class="partner-logo js-photo" src="assets/img/partner-4.png"
+                         data-base="assets/img/partner-4" data-exts="png,jpg,jpeg,webp"
+                         onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                         alt="ВТБ">
+                    <span class="partner-name">ВТБ</span>
+                </li>
+                <li class="partner-item" style="--brand:#1E3A8A;" data-reveal>
+                    <img class="partner-logo js-photo" src="assets/img/partner-5.png"
+                         data-base="assets/img/partner-5" data-exts="png,jpg,jpeg,webp"
+                         onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                         alt="Газпромбанк">
+                    <span class="partner-name">Газпромбанк</span>
+                </li>
+                <li class="partner-item" style="--brand:#FFCC00;" data-reveal>
+                    <img class="partner-logo js-photo" src="assets/img/partner-6.png"
+                         data-base="assets/img/partner-6" data-exts="png,jpg,jpeg,webp"
+                         onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                         alt="Райффайзен">
+                    <span class="partner-name">Райффайзен</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 </main>
 
 <footer class="site-footer" id="contacts">
@@ -1107,7 +1161,7 @@
         <nav class="footer-col" aria-label="Навигация по сайту">
             <p class="footer-col-title">Навигация</p>
             <ul>
-                <li><a href="#properties">Адреса</a></li>
+                <li><a href="addresses.html">Адреса</a></li>
                 <li><a href="#llc">Регистрация ООО</a></li>
                 <li><a href="#advantages">Услуги</a></li>
                 <li><a href="#foundation">О компании</a></li>
@@ -1153,6 +1207,56 @@
                   stroke-linejoin="round"/>
         </svg>
     </a>
+</div>
+
+<div class="property-modal" id="property-modal" aria-hidden="true">
+    <div class="property-modal-overlay" data-modal-close></div>
+    <div class="property-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="property-modal-title">
+        <button class="property-modal-close" type="button" data-modal-close aria-label="Закрыть">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <div class="property-modal-media">
+            <div class="property-modal-svg" aria-hidden="true"></div>
+            <img class="property-modal-photo" src="" alt="" hidden>
+        </div>
+        <div class="property-modal-body">
+            <p class="property-modal-price"></p>
+            <h3 class="property-modal-title" id="property-modal-title"></h3>
+            <p class="property-modal-address"></p>
+            <p class="property-modal-location"></p>
+            <ul class="property-modal-pricing">
+                <li>
+                    <span>Первичная регистрация</span>
+                    <strong class="property-modal-primary-price"></strong>
+                </li>
+                <li>
+                    <span>Смена адреса внутри ИФНС</span>
+                    <strong>15 000 ₽ / 11 мес.</strong>
+                </li>
+                <li>
+                    <span>Смена адреса из другой ИФНС</span>
+                    <strong>20 000 ₽ / 11 мес.</strong>
+                </li>
+                <li>
+                    <span>Перевод из региона в Москву</span>
+                    <strong>150 000 ₽ / 11 мес.</strong>
+                </li>
+                <li>
+                    <span>Почтовое сопровождение</span>
+                    <strong>500 ₽ / мес</strong>
+                </li>
+            </ul>
+            <a href="#cta-final" class="btn btn-dark btn-arrow property-modal-cta" data-modal-close>
+                <span>Оставить заявку</span>
+                <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+    </div>
 </div>
 
 <script src="assets/js/index.js"></script>

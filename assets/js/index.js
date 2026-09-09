@@ -106,6 +106,78 @@ const initDropdowns = () => {
     });
 };
 
+const initPropertyModal = () => {
+    const modal = document.getElementById('property-modal');
+    if (!modal) return;
+
+    const photo = modal.querySelector('.property-modal-photo');
+    const svgBox = modal.querySelector('.property-modal-svg');
+    const title = modal.querySelector('.property-modal-title');
+    const address = modal.querySelector('.property-modal-address');
+    const location = modal.querySelector('.property-modal-location');
+    const price = modal.querySelector('.property-modal-price');
+    const primaryPrice = modal.querySelector('.property-modal-primary-price');
+
+    let lastFocused = null;
+
+    const openModal = (card) => {
+        const img = card.querySelector('img.property-photo.js-photo');
+        const svg = card.querySelector('svg.property-photo');
+        const area = card.querySelector('.property-area');
+        const addressEl = card.querySelector('.property-address');
+        const locationEl = card.querySelector('.property-location');
+        const priceEl = card.querySelector('.property-price');
+
+        if (img && !img.classList.contains('is-broken') && img.currentSrc) {
+            photo.src = img.currentSrc;
+            photo.alt = img.alt || '';
+            photo.hidden = false;
+            svgBox.hidden = true;
+            svgBox.innerHTML = '';
+        } else {
+            photo.hidden = true;
+            photo.removeAttribute('src');
+            svgBox.innerHTML = svg ? svg.outerHTML : '';
+            svgBox.hidden = false;
+        }
+
+        title.textContent = area ? area.textContent : '';
+        address.textContent = addressEl ? addressEl.textContent : '';
+        location.innerHTML = locationEl ? locationEl.innerHTML : '';
+        price.innerHTML = priceEl ? priceEl.innerHTML : '';
+        primaryPrice.textContent = priceEl ? `${priceEl.childNodes[0].textContent.trim()} / 11 мес.` : '';
+
+        lastFocused = document.activeElement;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+        modal.querySelector('.property-modal-close').focus();
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        if (lastFocused) lastFocused.focus();
+    };
+
+    document.querySelectorAll('.property-arrow').forEach((arrow) => {
+        arrow.addEventListener('click', (e) => {
+            e.preventDefault();
+            const card = arrow.closest('.property-card');
+            if (card) openModal(card);
+        });
+    });
+
+    modal.querySelectorAll('[data-modal-close]').forEach((el) => {
+        el.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+};
+
 const initHeroButtonWidths = () => {
     const buttons = document.querySelectorAll('.hero-actions .btn');
     if (buttons.length < 2) return;
@@ -293,6 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFaqAccordion();
     initButtonEffects();
     initCtaForm();
+    initPropertyModal();
     initIfnsPage();
     initMobileStickyCta();
     initFooterYear();
