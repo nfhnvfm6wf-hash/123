@@ -128,44 +128,8 @@ const initScrollReveal = () => {
         });
     });
 
-    const revealTargets = document.querySelectorAll('[data-reveal]');
-
-    if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.14, rootMargin: '0px 0px -6% 0px' }
-        );
-
-        revealTargets.forEach((el) => revealObserver.observe(el));
-    } else {
-        revealTargets.forEach((el) => el.classList.add('is-visible'));
-    }
-
-    document.querySelectorAll('.process-list li').forEach((el) => {
-        if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            io.unobserve(entry.target);
-                        }
-                    });
-                },
-                { threshold: 0.4 }
-            );
-            io.observe(el);
-        } else {
-            el.classList.add('is-visible');
-        }
-    });
+    document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-visible'));
+    document.querySelectorAll('.process-list li').forEach((el) => el.classList.add('is-visible'));
 };
 
 const initStatCounters = () => {
