@@ -308,6 +308,17 @@ const initCtaForm = () => {
     }
 };
 
+const initPackageSelect = () => {
+    const packageInput = document.getElementById('cta-package');
+    if (!packageInput) return;
+
+    document.querySelectorAll('[data-package]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            packageInput.value = btn.dataset.package;
+        });
+    });
+};
+
 const initMobileStickyCta = () => {
     const mobileSticky = document.getElementById('mobile-sticky');
     const ctaFinal = document.getElementById('cta-final');
@@ -367,6 +378,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCtaForm();
     initPropertyModal();
     initIfnsPage();
+    initPackageSelect();
     initMobileStickyCta();
     initFooterYear();
 });

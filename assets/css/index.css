@@ -18,6 +18,7 @@
 @import "./components/sections/properties.css";
 @import "./components/sections/foundation.css";
 @import "./components/sections/documents.css";
+@import "./components/sections/packages.css";
 @import "./components/sections/inaccuracy.css";
 @import "./components/sections/llc.css";
 @import "./components/sections/process.css";

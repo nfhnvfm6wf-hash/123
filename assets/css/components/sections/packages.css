@@ -1,0 +1,137 @@
+.packages {
+    padding: 88px 0;
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 44px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.package-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 26px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    background: var(--bg);
+    transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
+}
+
+.package-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 50px -30px rgba(23, 20, 15, .3);
+}
+
+.package-card.is-popular {
+    background: var(--dark);
+    color: var(--cream);
+    border-color: var(--dark);
+}
+
+.package-badge {
+    position: absolute;
+    top: -13px;
+    left: 26px;
+    background: var(--text);
+    color: var(--cream);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    padding: 5px 12px;
+    border-radius: 999px;
+}
+
+.package-card.is-popular .package-badge {
+    background: var(--cream);
+    color: var(--dark);
+}
+
+.package-name {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.package-price {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.package-price small {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.package-card.is-popular .package-price small {
+    color: rgba(247, 243, 236, .6);
+}
+
+.package-note {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.package-card.is-popular .package-note {
+    color: rgba(247, 243, 236, .65);
+    border-color: rgba(247, 243, 236, .18);
+}
+
+.package-features {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 28px;
+    flex: 1;
+}
+
+.package-features li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 13.5px;
+    line-height: 1.4;
+}
+
+.package-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--text);
+}
+
+.package-card.is-popular .package-features li::before {
+    background: var(--cream);
+}
+
+.package-cta {
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 1080px) {
+    .packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 44px;
+    }
+}
+
+@media (max-width: 640px) {
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+}
