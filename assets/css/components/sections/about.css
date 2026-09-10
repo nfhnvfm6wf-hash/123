@@ -1,0 +1,89 @@
+.about-story {
+    padding: 88px 0 40px;
+}
+
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: clamp(40px, 6vw, 88px);
+    align-items: start;
+}
+
+.about-story h2 {
+    font-size: clamp(24px, 2.6vw, 32px);
+    margin-bottom: 18px;
+}
+
+.about-story p {
+    color: var(--text-muted);
+    font-size: 15.5px;
+    line-height: 1.65;
+    max-width: 52ch;
+}
+
+.about-story p + p {
+    margin-top: 14px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    overflow: hidden;
+}
+
+.about-stat {
+    background: var(--bg);
+    padding: 28px 26px;
+}
+
+.about-stat span {
+    display: block;
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.about-stat div {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.35;
+}
+
+.section-head-block {
+    max-width: 62ch;
+    margin-bottom: 36px;
+}
+
+.section-head-block h2 {
+    margin-bottom: 10px;
+}
+
+.section-head-block p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.about-guarantees {
+    padding: 40px 0 88px;
+}
+
+.about-guarantees .reg-details-list {
+    max-width: 680px;
+}
+
+@media (max-width: 860px) {
+    .about-story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+}
