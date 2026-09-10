@@ -6,43 +6,96 @@
 .cta-final-panel {
     position: relative;
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
-    gap: clamp(32px, 5vw, 64px);
+    grid-template-columns: 1.35fr 1fr;
+    gap: clamp(32px, 5vw, 56px);
     align-items: center;
+    border-radius: var(--radius-l);
+    overflow: hidden;
     background: var(--dark);
     color: var(--cream);
-    border-radius: var(--radius-l);
-    padding: clamp(32px, 5vw, 56px);
-    overflow: hidden;
+    padding: clamp(36px, 5vw, 64px);
+}
+
+.cta-final-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.cta-final-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .4;
+}
+
+.cta-final-photo.is-broken {
+    display: none;
+}
+
+.cta-final-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(10, 9, 7, .95) 45%, rgba(10, 9, 7, .82) 100%);
+}
+
+.cta-final-left,
+.cta-card {
+    position: relative;
+    z-index: 1;
 }
 
 .cta-final-eyebrow {
     display: inline-block;
     font-size: 13px;
     color: rgba(247, 243, 236, .55);
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 }
 
-.cta-final-panel h2 {
-    font-size: clamp(26px, 3vw, 36px);
-    line-height: 1.18;
-    margin-bottom: 18px;
+.cta-final-heading {
+    font-size: clamp(28px, 3.6vw, 42px);
+    line-height: 1.16;
+    margin-bottom: 22px;
 }
 
 .cta-final-accent {
     color: var(--accent);
 }
 
-.cta-final-panel > p {
+.cta-final-left > p {
     color: rgba(247, 243, 236, .72);
     font-size: 16px;
-    max-width: 44ch;
+    max-width: 42ch;
+}
+
+.cta-final-left > p b {
+    color: var(--cream);
+}
+
+.cta-final-manager {
+    margin-top: 40px;
+}
+
+.cta-final-manager-name {
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.cta-final-manager-desc {
+    font-size: 13.5px;
+    color: rgba(247, 243, 236, .6);
+    max-width: 40ch;
+    line-height: 1.45;
 }
 
 .cta-card {
     background: #2A251E;
     border-radius: var(--radius-m);
-    padding: 28px;
+    padding: 32px;
 }
 
 .cta-form {
@@ -54,12 +107,6 @@
 
 .cta-form[hidden] {
     display: none;
-}
-
-.cta-form-row {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
 }
 
 .cta-field {
@@ -79,7 +126,7 @@
     background: var(--cream);
     border: 1px solid transparent;
     border-radius: var(--radius-s);
-    padding: 14px 16px;
+    padding: 15px 16px;
     font-size: 14.5px;
     color: var(--text);
     transition: box-shadow var(--dur-s) var(--ease);
@@ -117,6 +164,8 @@
 
 .cta-submit {
     justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
     background: var(--accent);
     color: var(--dark);
 }
@@ -126,17 +175,22 @@
     box-shadow: 0 10px 30px -12px rgba(227, 163, 57, .5);
 }
 
+.cta-messengers {
+    display: flex;
+    gap: 10px;
+    margin-top: 4px;
+}
+
 .cta-messenger {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 14px;
-    padding: 13px;
+    padding: 13px 10px;
     border-radius: var(--radius-s);
-    background: var(--whatsapp);
     color: #fff;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 600;
     transition: filter var(--dur-s) var(--ease), transform var(--dur-s) var(--ease);
 }
@@ -147,20 +201,35 @@
 }
 
 .cta-messenger svg {
-    width: 18px;
-    height: 18px;
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.cta-messenger.is-whatsapp {
+    background: var(--whatsapp);
+}
+
+.cta-messenger.is-telegram {
+    background: var(--telegram);
 }
 
 .cta-form-success {
-    background: var(--dark-2);
+    background: #2A251E;
     border-radius: var(--radius-m);
     padding: 26px 28px;
     color: var(--cream);
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 860px) {
     .cta-final-panel {
         grid-template-columns: 1fr;
+    }
+
+    .cta-final-manager {
+        margin-top: 28px;
     }
 }
 
@@ -170,6 +239,10 @@
     }
 
     .cta-card {
-        padding: 22px;
+        padding: 24px;
+    }
+
+    .cta-messengers {
+        flex-direction: column;
     }
 }

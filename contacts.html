@@ -199,34 +199,42 @@
     <section class="cta-final" id="cta-final">
         <div class="container">
             <div class="cta-final-panel" data-reveal>
-                <div>
-                    <p class="cta-final-eyebrow">[ Свяжемся с вами напрямую ]</p>
-                    <h2>Остались <span class="cta-final-accent">вопросы?</span></h2>
-                    <p>Оставьте заявку — свяжемся с вами и ответим на любые вопросы по адресу и регистрации ООО.</p>
+                <div class="cta-final-media" aria-hidden="true">
+                    <img class="cta-final-photo js-photo" src="assets/img/hero.jpg" data-base="assets/img/hero"
+                         data-exts="jpg,png,jpeg,webp"
+                         onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                         alt="">
+                </div>
+
+                <div class="cta-final-left">
+                    <p class="cta-final-eyebrow">[ Нужна помощь с выбором юридического адреса? ]</p>
+                    <h2 class="cta-final-heading">Получите предварительную<br>консультацию менеджера<br><span class="cta-final-accent">бесплатно</span></h2>
+                    <p>Заполните форму заявки или напишите нам в мессенджеры. Среднее время ответа в рабочее время
+                        — <b>5 минут</b>.</p>
+
+                    <div class="cta-final-manager">
+                        <p class="cta-final-manager-name">Менеджер</p>
+                        <p class="cta-final-manager-desc">Поможет подобрать адрес, рассчитать стоимость и определить
+                            порядок оформления.</p>
+                    </div>
                 </div>
 
                 <div class="cta-card">
                     <form class="cta-form" id="cta-form" novalidate>
-                        <div class="cta-form-row">
-                            <label class="cta-field">
-                                <span>Имя</span>
-                                <input type="text" name="name" autocomplete="name" required placeholder="Как к вам обращаться">
-                            </label>
-                            <label class="cta-field">
-                                <span>Телефон</span>
-                                <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__">
-                            </label>
-                            <label class="cta-field">
-                                <span>Комментарий</span>
-                                <input type="text" name="comment" placeholder="Кратко о вопросе (по желанию)">
-                            </label>
-                        </div>
+                        <label class="cta-field">
+                            <span>Имя</span>
+                            <input type="text" name="name" autocomplete="name" required placeholder="Как к вам обращаться">
+                        </label>
+                        <label class="cta-field">
+                            <span>Телефон</span>
+                            <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__">
+                        </label>
                         <label class="cta-consent">
                             <input type="checkbox" required>
                             <span>Я даю согласие на обработку <a href="#" class="link-underline">персональных данных</a> и соглашаюсь с <a href="#" class="link-underline">политикой конфиденциальности</a></span>
                         </label>
                         <button type="submit" class="btn btn-arrow cta-submit">
-                            <span>Отправить сообщение</span>
+                            <span>Получить консультацию</span>
                             <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
                                       stroke-linejoin="round"/>
@@ -235,16 +243,23 @@
                     </form>
 
                     <div class="cta-form-success" id="cta-success" hidden>
-                        <p>Сообщение отправлено. Мы свяжемся с вами в ближайшее время — обычно это занимает не больше 15
-                            минут в рабочее время.</p>
+                        <p>Заявка принята. Мы свяжемся с вами в течение 5 минут в рабочее время.</p>
                     </div>
 
-                    <a class="cta-messenger" href="https://wa.me/74951282604" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-                            <path d="M16.04 3C9.3 3 3.84 8.46 3.84 15.2c0 2.25.6 4.44 1.75 6.36L3.7 28.4l7-1.83a12.35 12.35 0 0 0 5.34 1.22h.01c6.74 0 12.2-5.46 12.2-12.2 0-3.26-1.27-6.32-3.57-8.62A12.1 12.1 0 0 0 16.04 3Zm0 22.33h-.01a10.2 10.2 0 0 1-5.2-1.42l-.37-.22-3.88 1.02 1.04-3.78-.24-.39a10.15 10.15 0 0 1-1.56-5.43c0-5.63 4.58-10.21 10.22-10.21 2.73 0 5.3 1.06 7.22 3 1.93 1.93 3 4.5 3 7.23 0 5.63-4.7 10.2-10.22 10.2Zm5.6-7.65c-.3-.15-1.8-.9-2.1-1-.28-.1-.48-.15-.69.15-.2.3-.79 1-.97 1.2-.18.2-.36.23-.66.08-1.8-.9-3-1.62-4.2-3.68-.31-.54.31-.5.9-1.68.1-.2.05-.38-.03-.53-.08-.15-.69-1.66-.95-2.28-.25-.6-.5-.51-.69-.52h-.59c-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.55s1.09 2.96 1.24 3.16c.15.2 2.15 3.28 5.22 4.6 1.94.84 2.7.91 3.67.77.59-.09 1.8-.74 2.06-1.45.25-.71.25-1.32.18-1.45-.08-.14-.27-.22-.57-.37Z"/>
-                        </svg>
-                        Написать в WhatsApp
-                    </a>
+                    <div class="cta-messengers">
+                        <a class="cta-messenger is-telegram" href="https://t.me/+74951282604" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-2 1.93c-.23.23-.42.42-.82.42z"/>
+                            </svg>
+                            Telegram
+                        </a>
+                        <a class="cta-messenger is-whatsapp" href="https://wa.me/74951282604" target="_blank" rel="noopener">
+                            <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                                <path d="M16.04 3C9.3 3 3.84 8.46 3.84 15.2c0 2.25.6 4.44 1.75 6.36L3.7 28.4l7-1.83a12.35 12.35 0 0 0 5.34 1.22h.01c6.74 0 12.2-5.46 12.2-12.2 0-3.26-1.27-6.32-3.57-8.62A12.1 12.1 0 0 0 16.04 3Zm0 22.33h-.01a10.2 10.2 0 0 1-5.2-1.42l-.37-.22-3.88 1.02 1.04-3.78-.24-.39a10.15 10.15 0 0 1-1.56-5.43c0-5.63 4.58-10.21 10.22-10.21 2.73 0 5.3 1.06 7.22 3 1.93 1.93 3 4.5 3 7.23 0 5.63-4.7 10.2-10.22 10.2Zm5.6-7.65c-.3-.15-1.8-.9-2.1-1-.28-.1-.48-.15-.69.15-.2.3-.79 1-.97 1.2-.18.2-.36.23-.66.08-1.8-.9-3-1.62-4.2-3.68-.31-.54.31-.5.9-1.68.1-.2.05-.38-.03-.53-.08-.15-.69-1.66-.95-2.28-.25-.6-.5-.51-.69-.52h-.59c-.2 0-.53.08-.8.38-.28.3-1.06 1.04-1.06 2.55s1.09 2.96 1.24 3.16c.15.2 2.15 3.28 5.22 4.6 1.94.84 2.7.91 3.67.77.59-.09 1.8-.74 2.06-1.45.25-.71.25-1.32.18-1.45-.08-.14-.27-.22-.57-.37Z"/>
+                            </svg>
+                            WhatsApp
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
