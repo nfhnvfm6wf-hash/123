@@ -231,64 +231,59 @@
     </section>
 
     <section class="cta-final" id="cta-final">
-        <div class="container cta-final-inner" data-reveal>
-            <div class="cta-final-media" aria-hidden="true">
-                <svg viewBox="0 0 480 600" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                        <linearGradient id="ctaGrad" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stop-color="#221F19"/>
-                            <stop offset="100%" stop-color="#8B8474"/>
-                        </linearGradient>
-                    </defs>
-                    <rect width="480" height="600" fill="url(#ctaGrad)"/>
-                    <g opacity="0.25" stroke="#F7F3EC" stroke-width="1">
-                        <path d="M0 150H480M0 300H480M0 450H480M120 0V600M240 0V600M360 0V600"/>
-                    </g>
-                    <g fill="none" stroke="#F7F3EC" stroke-width="1.4" opacity="0.9">
-                        <circle cx="240" cy="220" r="60"/>
-                        <path d="M112 566C112 462 162 392 240 392C318 392 368 462 368 566" stroke-linecap="round"/>
-                        <path d="M240 392L214 452L240 424L266 452L240 392Z" opacity="0.55"/>
-                    </g>
-                </svg>
-                <img class="cta-final-photo js-photo" src="assets/img/manager.jpg" data-base="assets/img/manager"
-                     data-exts="jpg,png,jpeg,webp"
-                     onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
-                     alt="Менеджер ADRES">
-            </div>
-            <div class="cta-final-copy">
-            <h2>Остались вопросы?</h2>
-            <p>Оставьте заявку — свяжемся с вами и ответим на любые вопросы по адресу и регистрации ООО.</p>
+        <div class="cta-final-media" aria-hidden="true">
+            <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <linearGradient id="ctaGrad" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#100F0C"/>
+                        <stop offset="100%" stop-color="#4A4232"/>
+                    </linearGradient>
+                </defs>
+                <rect width="1600" height="900" fill="url(#ctaGrad)"/>
+                <g opacity="0.3" stroke="#F7F3EC" stroke-width="1">
+                    <path d="M0 150H1600M0 300H1600M0 450H1600M0 600H1600M0 750H1600M200 0V900M400 0V900M600 0V900M800 0V900M1000 0V900M1200 0V900M1400 0V900"/>
+                </g>
+            </svg>
+            <img class="cta-final-photo js-photo" src="assets/img/manager.jpg" data-base="assets/img/manager"
+                 data-exts="jpg,png,jpeg,webp"
+                 onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                 alt="Менеджер ADRES">
+        </div>
+        <div class="container">
+            <div class="cta-final-card" data-reveal>
+                <h2>Остались вопросы?</h2>
+                <p>Оставьте заявку — свяжемся с вами и ответим на любые вопросы по адресу и регистрации ООО.</p>
 
-            <form class="cta-form" id="cta-form" novalidate>
-                <div class="cta-form-row">
-                    <label class="cta-field">
-                        <span>Имя</span>
-                        <input type="text" name="name" autocomplete="name" required placeholder="Как к вам обращаться">
-                    </label>
-                    <label class="cta-field">
-                        <span>Телефон</span>
-                        <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__">
-                    </label>
-                    <label class="cta-field">
-                        <span>Комментарий</span>
-                        <input type="text" name="comment" placeholder="Кратко о вопросе (по желанию)">
-                    </label>
+                <form class="cta-form" id="cta-form" novalidate>
+                    <div class="cta-form-row">
+                        <label class="cta-field">
+                            <span>Имя</span>
+                            <input type="text" name="name" autocomplete="name" required placeholder="Как к вам обращаться">
+                        </label>
+                        <label class="cta-field">
+                            <span>Телефон</span>
+                            <input type="tel" name="phone" autocomplete="tel" required placeholder="+7 (___) ___-__-__">
+                        </label>
+                        <label class="cta-field">
+                            <span>Комментарий</span>
+                            <input type="text" name="comment" placeholder="Кратко о вопросе (по желанию)">
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-dark btn-arrow cta-submit">
+                        <span>Отправить сообщение</span>
+                        <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <p class="cta-form-note">Нажимая кнопку, вы соглашаетесь с <a href="#" class="link-underline">политикой
+                        обработки персональных данных.</a></p>
+                </form>
+
+                <div class="cta-form-success" id="cta-success" hidden>
+                    <p>Сообщение отправлено. Мы свяжемся с вами в ближайшее время — обычно это занимает не больше 15
+                        минут в рабочее время.</p>
                 </div>
-                <button type="submit" class="btn btn-light btn-arrow cta-submit">
-                    <span>Отправить сообщение</span>
-                    <svg class="icon-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
-                              stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <p class="cta-form-note">Нажимая кнопку, вы соглашаетесь с <a href="#" class="link-underline">политикой
-                    обработки персональных данных.</a></p>
-            </form>
-
-            <div class="cta-form-success" id="cta-success" hidden>
-                <p>Сообщение отправлено. Мы свяжемся с вами в ближайшее время — обычно это занимает не больше 15
-                    минут в рабочее время.</p>
-            </div>
             </div>
         </div>
     </section>
