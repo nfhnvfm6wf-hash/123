@@ -22,6 +22,10 @@
     gap: 14px;
 }
 
+.reg-form[hidden] {
+    display: none;
+}
+
 .reg-field {
     display: flex;
     flex-direction: column;
