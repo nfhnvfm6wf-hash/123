@@ -232,6 +232,30 @@
 
     <section class="cta-final" id="cta-final">
         <div class="container cta-final-inner" data-reveal>
+            <div class="cta-final-media" aria-hidden="true">
+                <svg viewBox="0 0 480 600" preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <linearGradient id="ctaGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#221F19"/>
+                            <stop offset="100%" stop-color="#8B8474"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="480" height="600" fill="url(#ctaGrad)"/>
+                    <g opacity="0.25" stroke="#F7F3EC" stroke-width="1">
+                        <path d="M0 150H480M0 300H480M0 450H480M120 0V600M240 0V600M360 0V600"/>
+                    </g>
+                    <g fill="none" stroke="#F7F3EC" stroke-width="1.4" opacity="0.9">
+                        <circle cx="240" cy="220" r="60"/>
+                        <path d="M112 566C112 462 162 392 240 392C318 392 368 462 368 566" stroke-linecap="round"/>
+                        <path d="M240 392L214 452L240 424L266 452L240 392Z" opacity="0.55"/>
+                    </g>
+                </svg>
+                <img class="cta-final-photo js-photo" src="assets/img/manager.jpg" data-base="assets/img/manager"
+                     data-exts="jpg,png,jpeg,webp"
+                     onerror="this.dataset.extIdx=(+(this.dataset.extIdx||0))+1;var e=(this.dataset.exts||'').split(',');if(this.dataset.extIdx<e.length){this.src=this.dataset.base+'.'+e[this.dataset.extIdx]}else{this.classList.add('is-broken')}"
+                     alt="Менеджер ADRES">
+            </div>
+            <div class="cta-final-copy">
             <h2>Остались вопросы?</h2>
             <p>Оставьте заявку — свяжемся с вами и ответим на любые вопросы по адресу и регистрации ООО.</p>
 
@@ -264,6 +288,7 @@
             <div class="cta-form-success" id="cta-success" hidden>
                 <p>Сообщение отправлено. Мы свяжемся с вами в ближайшее время — обычно это занимает не больше 15
                     минут в рабочее время.</p>
+            </div>
             </div>
         </div>
     </section>
