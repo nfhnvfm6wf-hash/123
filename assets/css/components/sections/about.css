@@ -53,6 +53,15 @@
     line-height: 1.35;
 }
 
+.about-stat.is-accent {
+    background: var(--accent);
+}
+
+.about-stat.is-accent span,
+.about-stat.is-accent div {
+    color: var(--dark);
+}
+
 .section-head-block {
     max-width: 62ch;
     margin-bottom: 36px;

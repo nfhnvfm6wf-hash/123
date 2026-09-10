@@ -10,6 +10,7 @@
 
 @import "./components/ui/button.css";
 @import "./components/ui/property-modal.css";
+@import "./components/ui/whatsapp-float.css";
 
 @import "./components/sections/header.css";
 @import "./components/sections/hero.css";
@@ -28,6 +29,5 @@
 @import "./components/sections/cta.css";
 @import "./components/sections/partners.css";
 @import "./components/sections/footer.css";
-@import "./components/sections/mobile-sticky.css";
 @import "./components/sections/contacts-page.css";
 @import "./components/sections/about.css";
