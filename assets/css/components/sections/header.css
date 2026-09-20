@@ -147,6 +147,11 @@
     box-shadow: 0 8px 20px -8px rgba(0, 0, 0, .4);
 }
 
+.header-side .header-cta {
+    height: 36px;
+    padding: 0 20px;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
