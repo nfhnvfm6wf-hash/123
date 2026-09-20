@@ -138,7 +138,7 @@
 
 .cta-field input:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(227, 163, 57, .45);
+    box-shadow: 0 0 0 3px rgba(245, 224, 40, .45);
 }
 
 .cta-consent {
@@ -172,7 +172,7 @@
 
 .cta-submit:hover {
     background: var(--accent-dark);
-    box-shadow: 0 10px 30px -12px rgba(227, 163, 57, .5);
+    box-shadow: 0 10px 30px -12px rgba(245, 224, 40, .5);
 }
 
 .cta-messengers {
