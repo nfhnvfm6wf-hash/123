@@ -93,5 +93,5 @@
 
 .btn-accent:hover {
     background: var(--accent-dark);
-    box-shadow: 0 10px 30px -12px rgba(139, 46, 62, .5);
+    box-shadow: 0 10px 30px -12px rgba(92, 122, 97, .5);
 }
