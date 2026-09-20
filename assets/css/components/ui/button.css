@@ -95,3 +95,18 @@
     background: var(--accent-dark);
     box-shadow: 0 10px 30px -12px rgba(245, 224, 40, .5);
 }
+
+.btn-attention {
+    animation: btnAttentionPulse 2.4s ease-out infinite;
+}
+
+.btn-attention:hover,
+.btn-attention:focus-visible {
+    animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-attention {
+        animation: none;
+    }
+}
