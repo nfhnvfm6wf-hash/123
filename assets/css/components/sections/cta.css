@@ -178,7 +178,7 @@
 .cta-messengers {
     display: flex;
     gap: 8px;
-    margin-top: 2px;
+    margin-top: 16px;
 }
 
 .cta-messenger {
