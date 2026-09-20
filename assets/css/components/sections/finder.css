@@ -5,6 +5,11 @@
     z-index: 2;
 }
 
+.finder .container {
+    padding-left: clamp(16px, 2.5vw, 28px);
+    padding-right: clamp(16px, 2.5vw, 28px);
+}
+
 .finder-card {
     background: var(--bg-alt);
     border: 1px solid var(--border);
