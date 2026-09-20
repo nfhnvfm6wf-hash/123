@@ -88,10 +88,10 @@
 
 .btn-accent {
     background: var(--accent);
-    color: var(--cream);
+    color: var(--dark);
 }
 
 .btn-accent:hover {
     background: var(--accent-dark);
-    box-shadow: 0 10px 30px -12px rgba(92, 122, 97, .5);
+    box-shadow: 0 10px 30px -12px rgba(227, 163, 57, .5);
 }
