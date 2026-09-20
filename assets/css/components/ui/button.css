@@ -29,8 +29,8 @@
 }
 
 .btn-dark {
-    background: var(--dark);
-    color: var(--cream);
+    background: var(--accent);
+    color: var(--dark);
 }
 
 .btn-dark::before {
@@ -38,7 +38,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: radial-gradient(120px 60px at var(--mx, 50%) var(--my, 50%), rgba(247, 243, 236, .18), transparent 70%);
+    background: radial-gradient(120px 60px at var(--mx, 50%) var(--my, 50%), rgba(23, 20, 15, .12), transparent 70%);
     opacity: 0;
     transition: opacity var(--dur-s) var(--ease);
 }
@@ -48,7 +48,8 @@
 }
 
 .btn-dark:hover {
-    box-shadow: 0 10px 30px -12px rgba(23, 20, 15, .5);
+    background: var(--accent-dark);
+    box-shadow: 0 10px 30px -12px rgba(196, 216, 46, .5);
     transform: translateY(-2px);
 }
 
