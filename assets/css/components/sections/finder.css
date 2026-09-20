@@ -1,11 +1,15 @@
 .finder {
-    background: var(--bg-alt);
     padding: 36px 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
     scroll-margin-top: 84px;
     position: relative;
     z-index: 2;
+}
+
+.finder-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-l);
+    padding: clamp(24px, 3.4vw, 36px);
 }
 
 .finder .section-head {
