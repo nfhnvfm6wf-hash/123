@@ -113,6 +113,40 @@
     color: var(--text-muted);
 }
 
+.header-messengers {
+    display: flex;
+    gap: 8px;
+}
+
+.header-messenger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-s);
+    color: #fff;
+    transition: transform var(--dur-s) var(--ease), box-shadow var(--dur-s) var(--ease);
+}
+
+.header-messenger svg {
+    width: 17px;
+    height: 17px;
+}
+
+.header-messenger.is-telegram {
+    background: var(--telegram);
+}
+
+.header-messenger.is-whatsapp {
+    background: var(--whatsapp);
+}
+
+.header-messenger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -8px rgba(0, 0, 0, .4);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -199,7 +233,7 @@
         align-items: flex-start;
     }
 
-    .main-nav, .header-side .header-phone, .header-side .header-cta {
+    .main-nav, .header-side .header-phone, .header-side .header-messengers, .header-side .header-cta {
         display: none;
     }
 
