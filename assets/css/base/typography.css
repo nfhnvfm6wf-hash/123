@@ -32,6 +32,7 @@ h3 {
 }
 
 .section-index {
+    display: none;
     font-size: 14px;
     letter-spacing: .1em;
     color: var(--text-soft);
