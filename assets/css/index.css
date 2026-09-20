@@ -20,8 +20,7 @@
 @import "./components/sections/documents.css";
 @import "./components/sections/packages.css";
 @import "./components/sections/reg-info.css";
-@import "./components/sections/inaccuracy.css";
-@import "./components/sections/llc.css";
+@import "./components/sections/help-panel.css";
 @import "./components/sections/process.css";
 @import "./components/sections/reviews.css";
 @import "./components/sections/faq.css";

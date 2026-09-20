@@ -85,3 +85,13 @@
     background: rgba(247, 243, 236, .08);
     transform: translateY(-2px);
 }
+
+.btn-accent {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.btn-accent:hover {
+    background: var(--accent-dark);
+    box-shadow: 0 10px 30px -12px rgba(227, 163, 57, .5);
+}
