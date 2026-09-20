@@ -50,12 +50,12 @@
 }
 
 .trust-card.is-accent {
-    background: var(--accent);
-    color: var(--dark);
+    background: #B36A3B;
+    color: var(--cream);
 }
 
 .trust-card.is-dark {
-    background: var(--dark);
+    background: #33301F;
     color: var(--cream);
 }
 
