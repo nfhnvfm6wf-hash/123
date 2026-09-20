@@ -18,7 +18,7 @@
     margin-top: 32px;
     border-radius: var(--radius-l);
     overflow: hidden;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
     border: 1px solid var(--border);
 }
 
