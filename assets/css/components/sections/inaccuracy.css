@@ -1,6 +1,6 @@
 .inaccuracy {
     background: var(--bg);
-    padding: 56px 0;
+    padding: 24px 0;
 }
 
 .inaccuracy-inner {
@@ -138,7 +138,7 @@
 
 @media (max-width: 560px) {
     .inaccuracy {
-        padding: 40px 0;
+        padding: 20px 0;
     }
 
     .inaccuracy-inner {
