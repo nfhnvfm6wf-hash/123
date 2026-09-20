@@ -70,7 +70,7 @@
 
 .help-panel-doc {
     position: relative;
-    width: min(180px, 88%);
+    width: min(210px, 88%);
     background: var(--cream);
     color: var(--text);
     border-radius: var(--radius-m);
@@ -110,7 +110,7 @@
 }
 
 .help-panel-doc-title {
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     line-height: 1.22;
     margin-bottom: 14px;
