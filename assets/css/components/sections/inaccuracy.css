@@ -6,7 +6,7 @@
 .inaccuracy-inner {
     display: flex;
     flex-direction: column;
-    max-width: 540px;
+    max-width: 720px;
     margin: 0 auto;
     background: var(--bg-alt);
     border: 1px solid var(--border);
@@ -38,14 +38,14 @@
 .inaccuracy-copy > p {
     color: var(--text-muted);
     font-size: 14.5px;
-    max-width: 40ch;
-    margin-bottom: 22px;
+    max-width: 58ch;
+    margin-bottom: 20px;
 }
 
 .inaccuracy-visual {
     position: relative;
-    min-height: 190px;
-    margin-top: 12px;
+    min-height: 150px;
+    margin-top: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
