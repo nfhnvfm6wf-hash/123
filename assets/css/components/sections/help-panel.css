@@ -4,9 +4,9 @@
 
 .help-panel-inner {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.05fr .7fr 1fr;
     align-items: center;
-    gap: clamp(32px, 5vw, 56px);
+    gap: clamp(24px, 4vw, 40px);
     margin-top: 20px;
     background: var(--dark);
     color: var(--cream);
@@ -50,6 +50,86 @@
     background: rgba(227, 163, 57, .18);
     color: var(--accent);
     font-size: 11px;
+}
+
+.help-panel-visual {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.help-panel-grid {
+    position: absolute;
+    inset: -14% -10%;
+    width: 124%;
+    height: 128%;
+    opacity: .3;
+}
+
+.help-panel-doc {
+    position: relative;
+    width: min(180px, 88%);
+    background: var(--cream);
+    color: var(--text);
+    border-radius: var(--radius-m);
+    padding: 18px 16px;
+    transform: rotate(-4deg);
+    box-shadow: 0 26px 48px -18px rgba(0, 0, 0, .55);
+}
+
+.help-panel-doc-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.help-panel-doc-tag {
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+}
+
+.help-panel-doc-warn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(227, 163, 57, .16);
+    color: var(--accent-dark);
+}
+
+.help-panel-doc-warn svg {
+    width: 12px;
+    height: 12px;
+}
+
+.help-panel-doc-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.22;
+    margin-bottom: 14px;
+}
+
+.help-panel-doc-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.help-panel-doc-row {
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border);
+}
+
+.help-panel-doc-row.short {
+    width: 58%;
 }
 
 .help-panel-actions {
@@ -112,5 +192,14 @@
 
     .help-panel h2 {
         max-width: none;
+    }
+
+    .help-panel-visual {
+        min-height: 160px;
+        order: 2;
+    }
+
+    .help-panel-actions {
+        order: 3;
     }
 }
