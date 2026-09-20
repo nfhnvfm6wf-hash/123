@@ -6,7 +6,7 @@
     position: relative;
     border-radius: var(--radius-l);
     overflow: hidden;
-    aspect-ratio: 21 / 8;
+    aspect-ratio: 21 / 5;
     border: 1px solid var(--border);
     background: var(--bg-alt);
 }
